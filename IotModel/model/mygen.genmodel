@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/IotModel/src" modelPluginID="IotModel" modelName="Mygen"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>iotModel.ecore</foreignModel>
+  <genPackages prefix="IotModel" disposableProviderFactory="true" ecorePackage="iotModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotModel.ecore#//Mode">
+      <genEnumLiterals ecoreEnumLiteral="iotModel.ecore#//Mode/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="iotModel.ecore#//Mode/OUTPUT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotModel.ecore#//DataType">
+      <genEnumLiterals ecoreEnumLiteral="iotModel.ecore#//DataType/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="iotModel.ecore#//DataType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="iotModel.ecore#//DataType/number"/>
+      <genEnumLiterals ecoreEnumLiteral="iotModel.ecore#//DataType/date"/>
+    </genEnums>
+    <genClasses ecoreClass="iotModel.ecore#//Network">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Network/measure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Network/instrument"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Network/measurand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Network/device"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Network/brokerconf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Network/name"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Device">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Device/binding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Device/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iotModel.ecore#//Device/instrument"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Instrument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Instrument/interet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Instrument/name"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Measurand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Measurand/name"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Measure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Measure/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Measure/type"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Interest">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iotModel.ecore#//Interest/features"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Interest/name"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Binding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iotModel.ecore#//Binding/measurand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Binding/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iotModel.ecore#//Binding/features"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//Features">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Features/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//Features/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iotModel.ecore#//Features/measure"/>
+    </genClasses>
+    <genClasses ecoreClass="iotModel.ecore#//BrokerConf">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/server"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/user"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/sslPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/webSocketsPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/connectionLimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotModel.ecore#//BrokerConf/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

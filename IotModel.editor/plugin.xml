@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mygen -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="iotModel.presentation.IotModelModelWizardID"
+            name="%_UI_IotModelModelWizard_label"
+            class="iotModel.presentation.IotModelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IotModelModelFile.gif">
+         <description>%_UI_IotModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mygen -->
+      <editor
+            id="iotModel.presentation.IotModelEditorID"
+            name="%_UI_IotModelEditor_label"
+            icon="icons/full/obj16/IotModelModelFile.gif"
+            extensions="iotmodel"
+            class="iotModel.presentation.IotModelEditor"
+            contributorClass="iotModel.presentation.IotModelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
